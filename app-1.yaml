@@ -4,10 +4,10 @@ metadata:
   name: app-from-scrach
 spec:
   destination:
-    namespace:
+    namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
-    path:
-    repoURL:
-
+    path: nginx
+    repoURL: https://github.com/cgraaaj/argocd-demo.git
+    targetRevision: main

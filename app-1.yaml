@@ -1,13 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-from-scrach
+  name: app-from-scrach-nginx
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
+    helm:
+      releaseName: application-from-helm
     path: nginx
     repoURL: https://github.com/cgraaaj/argocd-demo.git
     targetRevision: main
